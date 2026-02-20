@@ -2,7 +2,7 @@
 
 # desc: compile and run c/c++ file
 # notes: c17 / c++20
-# deps: clang
+# deps: clang mold
 
 ARGS=(
     -Wall -Wextra -Werror
