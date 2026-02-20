@@ -7,7 +7,6 @@
 ARGS=(
     -Wall -Wextra -Werror
     -O2 -pipe -fuse-ld=mold
-    -o executable
 )
 
 info() { echo "[INFO] $*"; }
