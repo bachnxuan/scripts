@@ -1,6 +1,7 @@
 #!/bin/bash
-
-WORKDIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
-
 # shellcheck disable=SC1090
-source "$WORKDIR/stable"/*
+
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd -P)"
+
+shopt -s nullglob
+source "$SCRIPT_DIR/stable"/*.sh

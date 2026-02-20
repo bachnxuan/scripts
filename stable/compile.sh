@@ -11,10 +11,11 @@ ARGS=(
 )
 
 info() { echo "[INFO] $*"; }
-die() { 
-    local ret=$1; shift;
+die() {
+    local ret=$1
+    shift
     echo "[ERROR] $*"
-    exit "$ret";
+    exit "$ret"
 }
 
 isolated_run() {
@@ -24,7 +25,7 @@ isolated_run() {
 
     info Compile success
     "$tmp/exe" || die $? Failed to execute program
-    
+
     printf '\n'
     rm -rf "$tmp"
 }
